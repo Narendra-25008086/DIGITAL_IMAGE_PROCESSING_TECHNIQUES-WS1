@@ -34,7 +34,9 @@ faceImage = cv2.imread(r"C:\Users\acer\Downloads\dip_ex-pareesh.jpeg")
 plt.imshow(faceImage[:,:,::-1]);plt.title("Face")
 ~~~
 ## OUTPUT:
-![alt text](image.png)
+<img width="1107" height="700" alt="image" src="https://github.com/user-attachments/assets/a008edfa-c4cf-4b50-81a5-cf252e28b4ea" />
+
+
 ### CODE:
 ~~~
 faceImage.shape
@@ -42,7 +44,7 @@ faceImage.shape
 faceImage.shape
 ~~~
 ## OUTPUT:
-![alt text](image-1.png)
+<img width="643" height="142" alt="image" src="https://github.com/user-attachments/assets/204f23b6-cc4e-49f0-b2ec-61765cba4ee6" />
 ### CODE:
 ~~~
 # Load the Sunglass image with Alpha channel
@@ -51,7 +53,9 @@ glassPNG = cv2.imread(r"C:\Users\acer\Downloads\sunglass-png-aviator-sunglass-pn
 plt.imshow(glassPNG[:,:,::-1]);plt.title("glassPNG")
 ~~~
 ## OUTPUT:
-![alt text](image-2.png)
+<img width="930" height="512" alt="image" src="https://github.com/user-attachments/assets/42656078-57e8-427e-8d05-cc6fa0e0f46a" />
+
+
 ### CODE:
 ~~~
 # Resize the image to fit over the eye region
@@ -59,12 +63,14 @@ glassPNG = cv2.resize(glassPNG,(360,100))
 print("image Dimension ={}".format(glassPNG.shape))
 ~~~
 ## OUTPUT:
-![alt text](image-3.png)
+<img width="647" height="131" alt="image" src="https://github.com/user-attachments/assets/64909b97-14bc-4dcc-b29a-2b1b2bf70fd0" />
+
 ### CODE:
 ~~~
 # Separate the Color and alpha channels
 glassBGR = glassPNG[:,:,0:3]
 glassMask1 = glassPNG[:,:,3]
+
 ----
 # Display the images for clarity
 plt.figure(figsize=[15,15])
@@ -72,7 +78,10 @@ plt.subplot(121);plt.imshow(glassBGR[:,:,::-1]);plt.title('Sunglass Color channe
 plt.subplot(122);plt.imshow(glassMask1,cmap='gray');plt.title('Sunglass Alpha channel');
 ~~~
 ## OUTPUT:
-![alt text](image-4.png)
+<img width="471" height="88" alt="image" src="https://github.com/user-attachments/assets/9b7197d3-bf7d-4fcb-a992-12d2ec738be4" />
+<img width="1132" height="257" alt="image" src="https://github.com/user-attachments/assets/a291c45c-f7cd-411e-8539-fc543b141ae0" />
+
+
 ### CODE:
 ~~~
 # Make a copy
@@ -85,7 +94,9 @@ faceWithGlassesNaive[825:925,110:470]=glassBGR
 plt.imshow(faceWithGlassesNaive[...,::-1])
 ~~~
 ## OUTPUT:
-![alt text](image-5.png)
+<img width="766" height="527" alt="image" src="https://github.com/user-attachments/assets/13401ef8-3fe0-4651-8ff8-6b460e388d0d" />
+
+
 ### CODE:
 ~~~
 # Make the dimensions of the mask same as the input image.
@@ -117,7 +128,8 @@ plt.subplot(132);plt.imshow(maskedGlass[...,::-1]);plt.title("Masked Sunglass Re
 plt.subplot(133);plt.imshow(eyeRoiFinal[...,::-1]);plt.title("Augmented Eye and Sunglass")
 ~~~
 ## OUTPUT:
-![alt text](image-6.png)
+<img width="1146" height="683" alt="image" src="https://github.com/user-attachments/assets/20b9469b-9643-46a8-9f15-5aa22c2a8688" />
+
 ### CODE:
 ~~~
 # Replace the eye ROI with the output from the previous section
@@ -129,7 +141,8 @@ plt.subplot(121);plt.imshow(faceImage[:,:,::-1]); plt.title("Original Image");
 plt.subplot(122);plt.imshow(faceWithGlassesArithmetic[:,:,::-1]);plt.title("With Sunglasses");
 ~~~
 ## OUTPUT:
-![alt text](image-7.png)
+![Uploading image.png…]()
+
 
 ## Applications:
 - Learning basic image processing techniques.
