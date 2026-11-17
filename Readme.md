@@ -141,7 +141,7 @@ plt.subplot(121);plt.imshow(faceImage[:,:,::-1]); plt.title("Original Image");
 plt.subplot(122);plt.imshow(faceWithGlassesArithmetic[:,:,::-1]);plt.title("With Sunglasses");
 ~~~
 ## OUTPUT:
-![Uploading image.png…]()
+<img width="1108" height="492" alt="image" src="https://github.com/user-attachments/assets/9fde2ba2-64e6-45f6-b1da-68c23a36567b" />
 
 
 ## Applications:
